@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with administrative or standard role authorization attributes.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The unique identifier of the user (usr_ prefix)."
+        },
+        "username": {
+          "type": "string",
+          "description": "The public username or verified Google email address."
+        },
+        "role": {
+          "type": "string",
+          "enum": ["Admin", "User"],
+          "description": "The administrative or general access privileges tier."
+        },
+        "isSuspended": {
+          "type": "boolean",
+          "description": "Indicates if the user profile is locked."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The ISO timestamp when the user profile was created."
+        }
+      },
+      "required": ["id", "username", "role", "isSuspended", "createdAt"]
+    }
+  },
+  "firestore": {
+    "users": {
+      "schema": "User",
+      "description": "Store authenticating users profiles."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "BY CS TOOLS",
+  "description": "Production-ready private URL shortener and click analytics platform by BY CS TOOLS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
